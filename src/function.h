@@ -17,7 +17,7 @@ class function{
         inline std::string get_infix() { return infix; } 
 
     public:
-        static function *try_parse(std::string infix);
+        static function *try_parse_infix(std::string infix);
 };
 
 
