@@ -6,8 +6,8 @@
 struct func_param{
 
     public:
-        std::string symbol;
         std::string name;
+        std::string symbol;
         double value;
 
 };
