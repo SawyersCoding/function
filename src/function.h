@@ -2,6 +2,7 @@
 #define FUNCTION_H
 
 #include "func_param.h"
+#include "operator/operator_factory.h"
 #include <stdexcept>
 #include <string>
 #include <vector>
@@ -13,6 +14,7 @@ class function{
         std::string rpn;
         std::vector<func_param> constants;
         std::vector<func_param> variables;
+        operator_factory op_factory;
 
     private:
        function(std::string infix, std::string rpn);
@@ -29,6 +31,7 @@ class function{
 
     public:
         static function *try_parse_infix(std::string infix);
+        static function *try_parse_rpn(std::string rpn);
 };
 
 
