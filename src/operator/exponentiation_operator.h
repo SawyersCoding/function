@@ -2,6 +2,7 @@
 #define EXPONENTIATION_OPERATOR_H
 
 #include "ioperator.h"
+#include <cmath>
 
 class exponentiation_operator : public ioperator {
 
