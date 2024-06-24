@@ -4,6 +4,7 @@ operator_factory::operator_factory()
 {
     map["+"] = new addition_operator();
     map["/"] = new division_operator();
+    map["^"] = new exponentiation_operator();
     map["*"] = new multiplication_operator();
     map["-"] = new subtraction_operator();
 }
@@ -12,6 +13,7 @@ operator_factory::~operator_factory()
 {
     delete map["+"]; // addition
     delete map["/"]; // division
+    delete map["^"]; // exponentiation
     delete map["*"]; // multiplication
     delete map["-"]; // subtraction
 }

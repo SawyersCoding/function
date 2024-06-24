@@ -3,6 +3,7 @@
 
 #include "addition_operator.h"
 #include "division_operator.h"
+#include "exponentiation_operator.h"
 #include "ioperator.h"
 #include "multiplication_operator.h"
 #include "subtraction_operator.h"
