@@ -19,6 +19,7 @@ class operator_factory{
         ~operator_factory();
 
     public:
+        bool is_operator(std::string op);
         ioperator *parse(std::string op);
 
 };

@@ -18,6 +18,11 @@ operator_factory::~operator_factory()
     delete map["-"]; // subtraction
 }
 
+bool operator_factory::is_operator(std::string op)
+{
+    return map.count(op) != 0;
+}
+
 ioperator *operator_factory::parse(std::string op)
 {
     if(map.count(op) == 0){
