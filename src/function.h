@@ -2,9 +2,13 @@
 #define FUNCTION_H
 
 #include "func_param.h"
+#include "invalid_infix_exception.h"
 #include "operator/operator_factory.h"
+#include <stack>
 #include <stdexcept>
 #include <string>
+#include <sstream>
+#include <unordered_set>
 #include <vector>
 
 class function{
@@ -17,7 +21,7 @@ class function{
         operator_factory op_factory;
 
     private:
-       function(std::string infix, std::string rpn);
+       function(std::string infix, std::string rpn, std::string name, std::vector<func_param> variables, std::vector<func_param> constants);
 
     public:
         double eval(std::vector<double> variable_values);
@@ -30,8 +34,8 @@ class function{
         inline int nvariables() { return variables.size(); }
 
     public:
-        static function *try_parse_infix(std::string infix);
-        static function *try_parse_rpn(std::string rpn);
+        static function *try_parse_infix(std::string name, std::vector<std::string> variables, std::string infix);
+        // static function *try_parse_rpn(std::string rpn);
 };
 
 
