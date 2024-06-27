@@ -16,5 +16,6 @@ $(FUNCLIB): $(OFILES)
 
 clean:
 	rm -f $(OFILES) $(FUNCLIB)
+	rm -f $(FUNCLIB)
 
 -include $(OFILES:.o=.d)
